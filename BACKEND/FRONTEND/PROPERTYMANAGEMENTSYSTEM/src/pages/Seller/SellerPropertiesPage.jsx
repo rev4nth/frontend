@@ -43,7 +43,7 @@ const SellerPropertiesPage = () => {
   const fetchProperties = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:2509/api/properties/my', {
+      const response = await fetch('https://fsd-jz2r.onrender.com/api/properties/my', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/json'
@@ -81,7 +81,7 @@ const SellerPropertiesPage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:2509/api/properties/${propertyId}`, {
+      const response = await fetch(`https://fsd-jz2r.onrender.com/api/properties/${propertyId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
