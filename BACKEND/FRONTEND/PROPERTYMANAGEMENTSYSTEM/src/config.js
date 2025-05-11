@@ -1,4 +1,4 @@
 const config={
-    url:"http://localhost:2509"
+    url:"https://fsd-jz2r.onrender.com"
 }
 export default config;
