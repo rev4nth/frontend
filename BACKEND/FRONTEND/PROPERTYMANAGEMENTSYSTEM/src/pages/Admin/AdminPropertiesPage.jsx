@@ -12,7 +12,7 @@ const AdminPropertiesPage = () => {
     const fetchProperties = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:2509/api/properties', {
+        const response = await axios.get('https://fsd-jz2r.onrender.com/api/properties', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setProperties(response.data);
