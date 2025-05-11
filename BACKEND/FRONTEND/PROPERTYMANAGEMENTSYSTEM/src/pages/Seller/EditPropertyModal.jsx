@@ -45,7 +45,7 @@ const EditPropertyModal = ({ property, onClose, onPropertyUpdated }) => {
     const token = localStorage.getItem('token');
 
     try {
-      const response = await fetch(`http://localhost:2509/api/properties/${property.id}`, {
+      const response = await fetch(`https://fsd-jz2r.onrender.com/api/properties/${property.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -217,7 +217,7 @@ const EditPropertyModal = ({ property, onClose, onPropertyUpdated }) => {
                   formData.append('file', file);
 
                   // Adjust the endpoint as per your backend
-                  const response = await fetch('http://localhost:2509/api/properties/upload', {
+                  const response = await fetch('https://fsd-jz2r.onrender.com/api/properties/upload', {
                     method: 'POST',
                     headers: {
                       'Authorization': `Bearer ${token}`,
