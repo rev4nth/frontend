@@ -23,7 +23,7 @@ const SellerHome = () => {
     const fetchSummary = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:2509/api/bookings/seller/summary', {
+        const response = await axios.get('https://fsd-jz2r.onrender.com/api/bookings/seller/summary', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setSummary(response.data);
