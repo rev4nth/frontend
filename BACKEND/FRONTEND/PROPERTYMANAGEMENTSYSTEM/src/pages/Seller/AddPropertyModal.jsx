@@ -69,7 +69,7 @@ const AddPropertyModal = ({ onClose, onPropertyAdded }) => {
       }
 
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:2509/api/properties', {
+      const response = await fetch('https://fsd-jz2r.onrender.com/api/properties', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
