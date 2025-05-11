@@ -36,8 +36,8 @@ const PropertyDetailsPage = () => {
     setLoading(true);
     try {
       const endpoint = userRole === 'SELLER' || userRole === 'ADMIN' 
-        ? `http://localhost:2509/api/properties/${id}`
-        : `http://localhost:2509/api/public/properties/${id}`;
+        ? `https://fsd-jz2r.onrender.com/api/properties/${id}`
+        : `https://fsd-jz2r.onrender.com/api/public/properties/${id}`;
 
       const response = await fetch(endpoint, {
         headers: {
@@ -72,7 +72,7 @@ const PropertyDetailsPage = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:2509/api/properties/${id}`, {
+      const response = await fetch(`https://fsd-jz2r.onrender.com/api/properties/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
